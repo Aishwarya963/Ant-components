@@ -1,5 +1,5 @@
 import { Layout, Menu } from 'antd';
-import "./App.css";
+import 'antd/dist/antd.css';
 import Alert from "./components/Alert";
 import Avatar from "./components/Avatar.js";
 import BackToTop from "./components/BackToTop";
@@ -26,59 +26,94 @@ import Tag from "./components/Tag.js";
 import TimePicker from "./components/TimePicker";
 import Tooltip from "./components/Tooltip";
 import Upload from "./components/Upload";
-const { Header, Content, Sider,Footer } = Layout;
+// import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import "./index.css";
+const { Header, Content, Sider, Footer } = Layout;
 const { SubMenu } = Menu;
 
 function App() {
   return (
     <div className="app">
-    <Layout>
-    <Header className="header">
-      <div className="logo" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
-      </Menu>
-    </Header>
-      <Sider>
-        Sider
-        <Avatar height={"16"} width={"16"}/>
-      <Badge height={"16"}  />
-      <Button>Home</Button>
-      <Checkbox  height={"16"} width={"16"} />
-      <Input />
-      <Radio />
-      <Select />
-      <Switch />
-      <Tag />
-      <Pagination height={"16"}  />
-      <Tabs />
-      <DropDown />
-      <Steps />
-      <BackToTop />
-      <DatePicker />
-      <TimePicker />
-      <Slider />
-      <Upload />
-      <Rating />
-      <Tooltip />
-      <Notification />
-      <Progress />
-      <Message />
-      <Alert />
-      <PopupConfirm />
-      <Model />
-        </Sider>
       <Layout>
-        <Content>Content</Content>
-        <Footer>Footer</Footer>
+        <Sider
+          width="200"
+          breakpoint="lg"
+          collapsedWidth="0"
+          onBreakpoint={broken => {
+            console.log(broken);
+          }}
+          onCollapse={(collapsed, type) => {
+            console.log(collapsed, type);
+          }}
+          style={{ overflow: "hidden" }}
+        >
+          <Menu theme="light" mode="inline">
+            <Menu.Item key="1" >
+              <Avatar height={"16"} width={"16"} />
+            </Menu.Item>
+            <Menu.Item key="2" >
+              <Badge height={"16"} />
+            </Menu.Item>
+            <Menu.Item key="3" >
+              <Button>Home</Button>
+            </Menu.Item>
+            <Menu.Item key="4" >
+              <Checkbox height={"16"} width={"16"} />
+            </Menu.Item>
+            <Menu.Item key="5" >
+              <Input />
+            </Menu.Item>
+            <Menu.Item key="6" >
+              <Radio />
+            </Menu.Item>
+            <Menu.Item key="7" >
+              <Select />
+            </Menu.Item>
+            <Menu.Item key="8" >
+              <Switch />
+            </Menu.Item>
+          </Menu>
+
+
+
+
+         
+        
+          
+          
+          <Tag />
+          <Pagination height={"16"} />
+          <Tabs />
+          <DropDown />
+          <Steps />
+          <BackToTop />
+          <DatePicker />
+          <TimePicker />
+          <Slider />
+          <Upload />
+          <Rating />
+          <Tooltip />
+          <Notification />
+          <Progress />
+          <Message />
+          <Alert />
+          <PopupConfirm />
+          <Model />
+        </Sider>
+        <Layout>
+          <Header className="site-layout-sub-header-background" style={{ padding: 0 }} />
+          <Content style={{ margin: '24px 16px 0' }}>
+            <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+              content
+        </div>
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        </Layout>
       </Layout>
-    </Layout>
-      
-     
+
     </div>
   );
 }
 
 export default App;
+
