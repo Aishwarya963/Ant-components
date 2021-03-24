@@ -1,7 +1,7 @@
 import React from "react";
 
 function Checkbox(props) {
-  const {width,height}=props;
+  const { width, height } = props;
   return (
     <svg
       id="_3.DataEntry_1.Checkbox_BrightColor_Icon-Hover"
@@ -24,7 +24,7 @@ function Checkbox(props) {
       </g>
     </svg>
   );
-};
+}
 
 export default Checkbox;
 //on

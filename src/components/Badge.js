@@ -1,7 +1,7 @@
 import React from "react";
 
 function Badge(props) {
-  const {width,height}=props;
+  const { width, height } = props;
 
   return (
     <svg
@@ -47,6 +47,6 @@ function Badge(props) {
       </g>
     </svg>
   );
-};
+}
 
 export default Badge;

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Avatar = (props) => {
-  const {height,width} = props;
+  const { height, width } = props;
   return (
     <svg
       id="DataDisplay_Avatar_Light_Circle-Icon"

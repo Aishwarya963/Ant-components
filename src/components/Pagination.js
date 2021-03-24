@@ -1,7 +1,7 @@
 import React from "react";
 
 const Pagination = (props) => {
-  const {width,height}=props;
+  const { width, height } = props;
   return (
     <svg
       id="Navigation_Pagination_Light_Default"
